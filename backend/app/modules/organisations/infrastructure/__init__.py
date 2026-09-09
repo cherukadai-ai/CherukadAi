@@ -1,0 +1,1 @@
+"""Organisations module infrastructure."""
