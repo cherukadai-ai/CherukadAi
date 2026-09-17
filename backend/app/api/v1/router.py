@@ -14,6 +14,7 @@ from app.modules.feature_wiring.api import routes as feature_wiring_routes
 from app.modules.features.api import routes as features_routes
 from app.modules.files.api import routes as files_routes
 from app.modules.identity.api import routes as identity_routes
+from app.modules.interior_design.api import routes as interior_design_routes
 from app.modules.organisations.api import routes as organisations_routes
 from app.modules.permissions.api import routes as permissions_routes
 from app.modules.projects.api import routes as projects_routes
@@ -36,5 +37,6 @@ api_router.include_router(agents_routes.router)
 api_router.include_router(workflows_routes.router)
 api_router.include_router(projects_routes.router)
 api_router.include_router(files_routes.router)
+api_router.include_router(interior_design_routes.router)
 api_router.include_router(audit_routes.router)
 api_router.include_router(usage_routes.router)

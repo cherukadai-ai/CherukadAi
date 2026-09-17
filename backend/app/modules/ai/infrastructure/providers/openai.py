@@ -73,6 +73,8 @@ class OpenAIProvider(IAITextProvider, IAIImageAnalysisProvider, IAIImageGenerati
     async def generate_image(self, request: AIRequest) -> AIResponse:
         model = request.model or self._default_image_model()
         payload = {"model": model, "prompt": request.prompt}
+        if request.image_data:
+            payload["image"] = request.image_data
         payload.update(request.parameters)
         started = time.perf_counter()
         result = await self._http.post(

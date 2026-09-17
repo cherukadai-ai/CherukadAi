@@ -17,6 +17,7 @@ from app.infrastructure.db.base import Base
 from app.modules.identity.infrastructure import models as identity_models  # noqa: F401
 from app.modules.organisations.infrastructure import models as organisation_models  # noqa: F401
 from app.modules.ai.infrastructure import models as ai_models  # noqa: F401
+from app.modules.interior_design.infrastructure import models as interior_design_models  # noqa: F401
 
 config = context.config
 

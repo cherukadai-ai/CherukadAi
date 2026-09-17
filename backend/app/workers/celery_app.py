@@ -21,4 +21,5 @@ celery_app.conf.update(
     result_serializer="json",
     timezone="UTC",
     enable_utc=True,
+    imports=("app.modules.interior_design.worker",),
 )

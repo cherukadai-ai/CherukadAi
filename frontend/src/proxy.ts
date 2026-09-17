@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 const SESSION_COOKIE_NAME = "cherukadai_session";
-const PROTECTED_PREFIXES = ["/dashboard", "/products"];
+const PROTECTED_PREFIXES = ["/dashboard", "/products", "/interior-design"];
 
 /**
  * Route-level gate based on session *presence* only (fast, no backend round-trip).
@@ -23,5 +23,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/products/:path*", "/login", "/setup"],
+  matcher: ["/dashboard/:path*", "/products/:path*", "/interior-design/:path*", "/login", "/setup"],
 };
